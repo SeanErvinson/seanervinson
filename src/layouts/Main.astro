@@ -14,12 +14,12 @@ const { title } = Astro.props;
 <html lang="en" class="dark">
   <head>
     <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" href="/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="generator" content={Astro.generator} />
     <meta
       name="description"
-      content="Ibrahim Elkamali's Portfolio Website - showcasing skills, projects, and experience in front-end web development."
+      content="Come say hi. Don't worry I don't bite, I just send memes."
     />
     <title>{title}</title>
     <ViewTransitions />
@@ -31,41 +31,37 @@ const { title } = Astro.props;
     />
 
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://www.ibrahimelkamali.com/" />
-    <meta property="og:title" content="Ibrahim Elkamali's Portfolio" />
+    <meta property="og:url" content="https://www.seanerivnson.com/" />
+    <meta property="og:title" content="Welcome | Sean Ervinson" />
     <meta
       property="og:description"
       content="Showcasing my skills, projects, and experience in front-end web development."
     />
     <meta
       property="og:image"
-      content="https://www.ibrahimelkamali.com/images/portfolio-preview.jpg"
+      content="https://www.seanerivnson.com/images/portfolio-preview.jpg"
     />
 
     <meta property="twitter:card" content="summary_large_image" />
-    <meta property="twitter:url" content="https://www.ibrahimelkamali.com/" />
-    <meta property="twitter:title" content="Ibrahim Elkamali's Portfolio" />
+    <meta property="twitter:url" content="https://www.seanerivnson.com/" />
+    <meta property="twitter:title" content="Welcome | Sean Ervinson" />
     <meta
       property="twitter:description"
       content="Showcasing my skills, projects, and experience in front-end web development."
     />
     <meta
       property="twitter:image"
-      content="https://www.ibrahimelkamali.com/images/portfolio-preview.jpg"
+      content="https://www.seanerivnson.com/images/portfolio-preview.jpg"
     />
 
-    <meta name="author" content="Ibrahim Elkamali" />
-    <meta
-      name="keywords"
-      content="Ibrahim Elkamali, Portfolio, Front-End Developer, Web Development, JavaScript, React, Astro, Svelte, TypeScript, Three.js, Tailwind CSS"
-    />
+    <meta name="author" content="Sean Ervinson" />
   </head>
 
-  <body class="overflow-x-hidden">
-    <main>
-      <NavigationBar />
+  <div class="flex min-h-screen flex-col">
+    <NavigationBar />
+    <main class="h-96 flex-1 p-4">
       <slot />
-      <Footer />
     </main>
-  </body>
+    <Footer />
+  </div>
 </html>
