@@ -10,22 +10,16 @@ type Props = MarkdownLayoutProps<{
 }>;
 
 const { title, subtitle, poster } = Astro.props.frontmatter;
-
-// const recentPosts = [
-//   { href: '#', label: 'Post 1', date: '2024-07-01' },
-//   { href: '#', label: 'Post 2', date: '2024-06-25' },
-//   { href: '#', label: 'Post 3' }, // No date provided
-// ];
 ---
 
-<Main title="Ibrahim Elkamali | Blog">
+<Main title="Sean Ong | Blog">
   <header
     class="relative w-full h-64 bg-gray-800 flex items-center justify-center mb-12"
   >
     <Image
       src={poster}
       alt="Poster image"
-      width={1024}
+      width={1000}
       height={480}
       class="absolute inset-0 w-full h-full object-cover opacity-50"
     />
@@ -37,34 +31,12 @@ const { title, subtitle, poster } = Astro.props.frontmatter;
     </div>
   </header>
 
-  <div class="container mx-auto px-4 lg:px-8">
-    <article>
-      <slot />
-    </article>
-  </div>
-
-  <!-- <aside
-    class="w-full bg-gray-900 dark:bg-grey-900 p-4 rounded-lg shadow-md mt-12"
+  <article
+    class="md:max-w-[768px] lg:max-w-[900px] prose dark:prose-invert
+prose-h1:font-bold prose-h1:text-xl
+prose-a:text-blue-600 prose-p:text-justify prose-img:rounded-xl
+prose-headings:underline"
   >
-    <h3 class="text-2xl font-semibold mb-4 dark:text-grey-400">Recent Posts</h3>
-    <ul class="list-none p-0">
-      {
-        recentPosts.map(({ href, label, date }) => (
-          <li class="mb-2">
-            <a
-              href={href}
-              class="text-blue-500 hover:underline dark:text-blue-400"
-            >
-              {label}
-            </a>
-            {date && (
-              <span class="block text-sm text-gray-500 dark:text-grey-600 mt-1">
-                {new Date(date).toLocaleDateString()}
-              </span>
-            )}
-          </li>
-        ))
-      }
-    </ul>
-  </aside> -->
+    <slot />
+  </article>
 </Main>

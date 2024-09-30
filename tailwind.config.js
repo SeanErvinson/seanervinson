@@ -20,6 +20,7 @@ export default {
     },
   },
   plugins: [
+    require('@tailwindcss/typography'),
     function ({ addBase, theme }) {
       addBase({
         ':root': {
@@ -55,7 +56,7 @@ export default {
           fontWeight: '400',
         },
         main: {
-          maxWidth: '40rem',
+          maxWidth: '80rem',
           margin: '0 auto',
         },
         'p, li': {
