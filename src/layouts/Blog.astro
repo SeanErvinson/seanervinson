@@ -13,30 +13,33 @@ const { title, subtitle, poster } = Astro.props.frontmatter;
 ---
 
 <Main title="Sean Ong | Blog">
-  <header
-    class="relative w-full h-64 bg-gray-800 flex items-center justify-center mb-12"
-  >
-    <Image
-      src={poster}
-      alt="Poster image"
-      width={1000}
-      height={480}
-      class="absolute inset-0 w-full h-full object-cover opacity-50"
-    />
-    <div class="relative z-10 text-center">
-      <h1 class="text-4xl mb-8 font-bold text-white dark:text-grey-900">
-        {title}
-      </h1>
-      <h2 class="text-2xl text-gray-300 dark:text-grey-600">{subtitle}</h2>
-    </div>
-  </header>
+  <div class="container">
+    <header
+      class="relative w-full h-52 bg-gray-800 flex items-center justify-center mt-4 mb-8"
+    >
+      <Image
+        src={poster}
+        alt="Poster image"
+        width={500}
+        height={500}
+        class="absolute inset-0 w-full h-full object-cover opacity-50"
+      />
+      <div class="relative z-10 text-center">
+        <h1 class="text-4xl mb-8 font-bold text-white dark:text-grey-900">
+          {title}
+        </h1>
+        <h2 class="text-2xl text-gray-300 dark:text-grey-600">{subtitle}</h2>
+      </div>
+    </header>
 
-  <article
-    class="md:max-w-[768px] lg:max-w-[900px] prose dark:prose-invert
+    <!-- <slot /> -->
+    <article
+      class="w-full prose dark:prose-invert
 prose-h1:font-bold prose-h1:text-xl
 prose-a:text-blue-600 prose-p:text-justify prose-img:rounded-xl
 prose-headings:underline"
-  >
-    <slot />
-  </article>
+    >
+      <slot />
+    </article>
+  </div>
 </Main>

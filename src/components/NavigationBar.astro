@@ -6,7 +6,7 @@ const isActive = (href: string) =>
   href === pathname || href === pathname.replace(/\/$/, '');
 ---
 
-<nav class="flex py-4 px-4 place-content-center">
+<nav class="flex my-4 place-content-center">
   <ul class="flex gap-2">
     {
       links.map(({ href, label }) => (
